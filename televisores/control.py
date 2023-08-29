@@ -20,15 +20,15 @@ class Control:
     def volumenDown(self): 
         self.tv.voumenDown()
     
-    def setCanal(self): 
-        self.tv.setCanal()
+    def setCanal(self, canal): 
+        self.tv.setCanal(canal)
     
-    def setVolumen(self): 
-        self.tv.setVolumen()
+    def setVolumen(self, volumen): 
+        self.tv.setVolumen(volumen)
     
     def enlazar(self, tv):
-        self.tv.setControl()    
-        self.tv = tv 
+        tv.setControl(self)  # Primero asignar el control a la televisión
+        self.tv = tv
     
     def setTv(self, tv): 
         self.tv = tv 
